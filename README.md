@@ -1,5 +1,12 @@
 # BIOX Studio - Teste Técnico
 
+> ⚠️ **Atenção:**
+> Você pode testar a API em produção em: [https://biox-studio-teste-tecnico.onrender.com](https://biox-studio-teste-tecnico.onrender.com)
+>
+> A documentação interativa (Swagger) está disponível em: [https://biox-studio-teste-tecnico.onrender.com/docs](https://biox-studio-teste-tecnico.onrender.com/docs)
+>
+> *Obs: Como o serviço Render é gratuito, a primeira requisição pode demorar alguns segundos para responder.*
+
 Este projeto é um teste técnico para a empresa **BIOX Studio**. Trata-se de uma API de receitas desenvolvida com NestJS, seguindo princípios de Clean Architecture e boas práticas de desenvolvimento.
 
 ## Sumário
