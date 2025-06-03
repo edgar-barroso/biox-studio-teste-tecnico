@@ -1,4 +1,4 @@
-import { NestFactory } from '@nestjs/core';
+import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { env } from './env';
 import { ValidationPipe } from '@nestjs/common';
@@ -8,7 +8,8 @@ import { AllExceptionsFilter } from './presentation/handler/all-exceptions-filte
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.useGlobalFilters(new AllExceptionsFilter());
+  const { httpAdapter } = app.get(HttpAdapterHost);
+  app.useGlobalFilters(new AllExceptionsFilter(httpAdapter));
 
   const config = new DocumentBuilder()
     .setTitle('Biox Studio API')
